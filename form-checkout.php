@@ -59,7 +59,22 @@ if ( flatsome_option( 'facebook_login_checkout' ) && get_option( 'woocommerce_en
     display: block;
     margin: 0px auto;
     background: #fbfafa;
-    box-shadow: 0px 19px 20px 0px #c8bdbd;
+    box-shadow: -1px 3px 20px 0px #c8bdbd;
+	border-radius: 10px;
+}
+button#place_order {
+    width: 100%;
+    border-radius: 10px;
+    padding: 7px;
+}
+.large-12.col.product_list_session {
+    padding: 20px;
+}
+.custom_checkout span.select2-selection.select2-selection--single {
+    border-radius: 8px;
+}
+.woocommerce-checkout-review-order-table tr.cart_item {
+    display: none;
 }
 .message-container.container.medium-text-center {
     text-align: center;
@@ -77,6 +92,20 @@ a.icon-remove, a.remove {
     width: 24px;
     position: relative;
     top: 6px;
+}
+div#customer_details input {
+    padding: 20px;
+    border-radius: 10px;
+}
+@media only screen and (max-width: 48em) {
+	.row.pt-0.custom_checkout {
+		width: 100%;
+		display: block;
+		margin: 0px auto;
+		background: #fbfafa;
+		box-shadow: -1px 3px 20px 0px #c8bdbd;
+		border-radius: 10px;
+	}	
 }
 </style>
 <form name="checkout" method="post" class="checkout woocommerce-checkout <?php echo esc_attr( $wrapper_classes ); ?>" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
